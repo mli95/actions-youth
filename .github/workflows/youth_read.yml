@@ -19,23 +19,23 @@ jobs:
       YOUTH_READ3: ${{ secrets.YOUTH_READ3 }}
       YOUTH_READ4: ${{ secrets.YOUTH_READ4 }}
       YOUTH_READ5: ${{ secrets.YOUTH_READ5 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ6 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ6 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ7 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ8 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ9 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ10 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ11 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ12 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ13 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ14 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ15 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ16 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ17 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ18 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ19 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ20 }}
-      YOUTH_READ5: ${{ secrets.YOUTH_READ21 }}
+      YOUTH_READ6: ${{ secrets.YOUTH_READ6 }}
+      YOUTH_READ7: ${{ secrets.YOUTH_READ7 }}
+      YOUTH_READ8: ${{ secrets.YOUTH_READ8 }}
+      YOUTH_READ9: ${{ secrets.YOUTH_READ9 }}
+      YOUTH_READ10: ${{ secrets.YOUTH_READ10 }}
+      YOUTH_READ11: ${{ secrets.YOUTH_READ11 }}
+      YOUTH_READ12: ${{ secrets.YOUTH_READ12 }}
+      YOUTH_READ13: ${{ secrets.YOUTH_READ13 }}
+      YOUTH_READ14: ${{ secrets.YOUTH_READ14 }}
+      YOUTH_READ15: ${{ secrets.YOUTH_READ15 }}
+      YOUTH_READ16: ${{ secrets.YOUTH_READ16 }}
+      YOUTH_READ17: ${{ secrets.YOUTH_READ17 }}
+      YOUTH_READ18: ${{ secrets.YOUTH_READ18 }}
+      YOUTH_READ19: ${{ secrets.YOUTH_READ19 }}
+      YOUTH_READ20: ${{ secrets.YOUTH_READ20 }}
+      YOUTH_READ21: ${{ secrets.YOUTH_READ21 }}
+      YOUTH_READ22: ${{ secrets.YOUTH_READ22 }}
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 12.x
@@ -80,3 +80,10 @@ jobs:
           node Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ5 }}
+          
+           - name: '运行 【中青看点自动阅读6】'
+        if: env.YOUTH_READ6
+        run: |
+          node Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ6 }}:  
