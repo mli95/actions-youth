@@ -83,15 +83,13 @@ jobs:
           node Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ7 }}
-          
       - name: '运行 【中青看点自动阅读⑦】'
         if: env.YOUTH_READ7
         run: |
           node Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ7 }}
-          
-      - name: '运行 【中青看点自动阅读⑧】'
+     - name: '运行 【中青看点自动阅读⑧】'
         if: env.YOUTH_READ8
         run: |
           node Youth_Read.js
