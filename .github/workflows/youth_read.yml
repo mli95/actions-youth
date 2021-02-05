@@ -6,7 +6,7 @@ name: Youth_Read(中青自动阅读)
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 */5 * * * '
+     - cron: '0/5 * * * *'
   watch:
     types: Youth_Read
 jobs:
@@ -21,6 +21,8 @@ jobs:
       YOUTH_READ5: ${{ secrets.YOUTH_READ5 }}
       YOUTH_READ6: ${{ secrets.YOUTH_READ6 }}
       YOUTH_READ7: ${{ secrets.YOUTH_READ7 }}
+      YOUTH_READ8: ${{ secrets.YOUTH_READ8 }}
+      YOUTH_READ9: ${{ secrets.YOUTH_READ9 }}
       
     steps:
       - uses: actions/checkout@v1
@@ -81,4 +83,25 @@ jobs:
           node Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ7 }}
+          
+      - name: '运行 【中青看点自动阅读⑦】'
+        if: env.YOUTH_READ7
+        run: |
+          node Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ7 }}
+          
+      - name: '运行 【中青看点自动阅读⑧】'
+        if: env.YOUTH_READ8
+        run: |
+          node Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ8 }}
+          
+     - name: '运行 【中青看点自动阅读⑨】'
+        if: env.YOUTH_READ9
+        run: |
+          node Youth_Read.js
+        env:
+          YOUTH_READ: ${{ secrets.YOUTH_READ9 }}
            
