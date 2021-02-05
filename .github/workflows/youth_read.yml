@@ -19,6 +19,23 @@ jobs:
       YOUTH_READ3: ${{ secrets.YOUTH_READ3 }}
       YOUTH_READ4: ${{ secrets.YOUTH_READ4 }}
       YOUTH_READ5: ${{ secrets.YOUTH_READ5 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ6 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ6 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ7 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ8 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ9 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ10 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ11 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ12 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ13 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ14 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ15 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ16 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ17 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ18 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ19 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ20 }}
+      YOUTH_READ5: ${{ secrets.YOUTH_READ21 }}
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 12.x
