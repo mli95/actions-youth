@@ -6,7 +6,7 @@ name: Youth_Read(中青自动阅读)
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0/5 * * * *'
+     - cron: '*/5 * * * *'
   watch:
     types: Youth_Read
 jobs:
@@ -19,10 +19,6 @@ jobs:
       YOUTH_READ3: ${{ secrets.YOUTH_READ3 }}
       YOUTH_READ4: ${{ secrets.YOUTH_READ4 }}
       YOUTH_READ5: ${{ secrets.YOUTH_READ5 }}
-      YOUTH_READ6: ${{ secrets.YOUTH_READ6 }}
-      YOUTH_READ7: ${{ secrets.YOUTH_READ7 }}
-      YOUTH_READ8: ${{ secrets.YOUTH_READ8 }}
-      
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 12.x
@@ -32,51 +28,38 @@ jobs:
       - name: npm install
         run: |
           npm install
-      
+          
       - name: '运行 【中青看点自动阅读一】'
         if: env.YOUTH_READ
         run: |
           node Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ }}
-      
+
       - name: '运行 【中青看点自动阅读二】'
         if: env.YOUTH_READ2
         run: |
           node Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ2 }}
-      
+          
       - name: '运行 【中青看点自动阅读三】'
         if: env.YOUTH_READ3
         run: |
           node Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ3 }}
-     - name: '运行 【中青看点自动阅读四】'
+          
+      - name: '运行 【中青看点自动阅读四】'
         if: env.YOUTH_READ4
         run: |
           node Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ4 }}
-     - name: '运行 【中青看点自动阅读五】'
+          
+      - name: '运行 【中青看点自动阅读五】'
         if: env.YOUTH_READ5
         run: |
           node Youth_Read.js
         env:
           YOUTH_READ: ${{ secrets.YOUTH_READ5 }}
-        
-      - name: '运行 【中青看点自动阅读六】'
-        if: env.YOUTH_READ6
-        run: |
-          node Youth_Read.js
-        env:
-          YOUTH_READ: ${{ secrets.YOUTH_READ6 }}
- 
-     - name: '运行 【中青看点自动阅读⑧】'
-        if: env.YOUTH_READ8
-        run: |
-          node Youth_Read.js
-        env:
-          YOUTH_READ: ${{ secrets.YOUTH_READ8 }}
-           
