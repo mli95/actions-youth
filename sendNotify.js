@@ -3,7 +3,7 @@
 const $ = new Env();
 //此处填你申请的SCKEY.
 //注：此处设置github action用户填写到Settings-Secrets里面(Name输入PUSH_KEY)
-let SCKEY = 'SCT7483Tncn5gf1jzILKmOFJxDsprKZ8';
+let SCKEY = 'SCU158611Te978e1042b7460d9281c39ff001a541c601de296767ba';
 const querystring = require("querystring");
 //此处填你BarkAPP的信息(IP/设备码，例如：https://api.day.app/XXXXXXXX)
 //注：此处设置github action用户填写到Settings-Secrets里面（Name输入BARK_PUSH）
